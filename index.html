@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Sayfası</title>
+  <link rel="stylesheet" href="assets/css/blog.css">
+  <script src="assets/js/blog.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header class="blogsHeader">
+      <h1>Filmler</h1>
+      <!-- <label class="editorControl">(<input type="checkbox"> editör)</label> -->
+      <button id="addBlogBtn">Ekle</button>
+    </header>
+
+    <div class="blogs" id="blogsContainer"></div>
+  </div>
+
+  <dialog id="modal">
+    <form method="dialog" class="blogAdd" id="addBlogForm">
+      <label for="tittle">Başlık</label>
+      <input type="text" name="tittle">
+      <label for="explanation">Açıklama</label>
+      <textarea name="explanation" rows="3"></textarea>
+      <label for="authorInformation">Yazar Bilgisi-(AD-SOYAD)</label>
+      <input type="text" name="authorInformation">
+      <label for="category">Film Kategorisi Seçiniz</label>
+      <select name="category" id="film">
+        <option value="Otomobil İncelemeleri">Otomobil İncelemeleri</option>
+        <option value="Motor Sporları">Motor Sporları</option>
+        <option value="Teknoloji ve Otomobiller">Teknoloji ve Otomobiller</option>
+        <option value="Otomobil Bakımı">Otomobil Bakımı</option>
+        <option value="Otomobil Kültürü">Otomobil Kültürü</option>
+      </select>
+      <label for="image">Görsel</label>
+      <input type="text" name="image">
+      <p><button class="modelAddNew">Blog Ekle</button> <button class="modelEdit">Kaydet</button> <button type="button" onclick="addBlogForm.reset();modal.close();">Vazgeç</button></p>
+      <input type="hidden" name="id" value="">
+    </form>
+  </dialog>
+</body>
+</html>
